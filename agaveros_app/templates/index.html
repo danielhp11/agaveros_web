@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agaveros</title>
+    <link rel="shortcut icon" href="{% static 'img/icon.ico' %}">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+</head>
+<body>
+    <div class="container mt-3">
+        <img src="{% static 'img/icon.png' %}" class="mx-auto d-block" style="width:50%"> 
+    </div>
+    
+    <div class="container mt-3">                
+        <h2>Inicia sesión</h2>
+        {% if messages  %}
+            {% for message in messages  %}
+                <div class="alert alert-info alert-dismissible">
+                    <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    <strong>{{message}}</strong> 
+                </div>
+                
+            {% endfor %}
+        {% endif %}
+        <form action="{% url 'login' %}" method="POST">
+            {% csrf_token %}
+          <div class="mb-3 mt-3">
+            <label for="email">Correo:</label>
+            <input type="email" class="form-control" id="email" placeholder="Ingresa tú correo" name="email">
+          </div>
+          <div class="mb-3">
+            <label for="pwd">Contraseña:</label>
+            <input type="password" class="form-control" id="pwd" placeholder="Ingresa tú contraseña" name="pswd">
+          </div>
+          <!-- Button to Open the Modal -->
+            <button type="button" class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#myModal">
+                ¡Registrate!
+            </button>
+          <button type="submit" class="btn btn-success">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="social-bar">
+      <a target="_blank" href="https://wa.me/523317478583"><img src="{% static 'img/icon/whatsapp.png' %}"width="50" height="50"></a>
+      <!--CHAT MSSENGER FACEBOOCK-->
+        <!-- Messenger Plugin de chat Code -->
+    <div id="fb-root"></div>
+
+    <!-- Your Plugin de chat code -->
+    <div id="fb-customer-chat" class="fb-customerchat">
+    </div>
+
+    <script>
+      var chatbox = document.getElementById('fb-customer-chat');
+      chatbox.setAttribute("page_id", "102521751913220");
+      chatbox.setAttribute("attribution", "biz_inbox");
+    </script>
+
+    <!-- Your SDK code -->
+    <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          xfbml            : true,
+          version          : 'v13.0'
+        });
+      };
+
+      (function(d, s, id) {
+        var js, fjs = d.getElementsByTagName(s)[0];
+        if (d.getElementById(id)) return;
+        js = d.createElement(s); js.id = id;
+        js.src = 'https://connect.facebook.net/es_LA/sdk/xfbml.customerchat.js';
+        fjs.parentNode.insertBefore(js, fjs);
+      }(document, 'script', 'facebook-jssdk'));
+    </script>
+      <!--END CHAT NESSENGER FACEBOOCK-->
+    </div> <!-- end iconos-fixed-redes -->
+
+    <div class="ride_main">
+      <h1 class="text_info">Cultivamos tú<span style="color: #008080;"> Inversión</span></h1>
+    </div> 
+
+    <div class="informacion">
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="image_1"><img src="{% static 'img/seleccion.jpeg' %}"></div>
+          </div>
+          <div class="col-sm-8">
+            <h1 class="cabe_text">1.- Selección</h1>
+            <p class="long_text">Producimos, seleccionamos y clasificamos los mejores hijuelos, para hacer la plantación en terrenos accesibles con las propiedades necesarias para cultivar agave de calidad, estos terrenos están dentro de la Denominación de Origen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1 class="secure_text">2.- Cuidado</h1>
+            <p class="long_text_2">Nuestro compromiso es producir agave de calidad, por lo tanto, todas nuestras plantaciones están supervisadas por los mejores ingenieros y son trabajadas por personal altamente capacitado, siempre buscando tener los mejores rendimientos.</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="image_1"><img src="{% static 'img/cuidado.jpeg' %}"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-sm-4">
+            <div class="image_1"><img src="{% static 'img/venta.jpeg' %}"></div>
+          </div>
+          <div class="col-sm-8">
+            <h1 class="cabe_text">3.- Venta</h1>
+            <p class="long_text">Se esta monitoreando de manera constante el mercado, para predecir y elegir el mejor momento para la venta del agave.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="container mt-3">
+        <div class="row">
+          <div class="col-sm-8">
+            <h1 class="secure_text">4.- Utilidad</h1>
+            <p class="long_text_2">Durante varios años cuidamos tu inversión para que al momento final obtengas tu utilidad con los mejores rendimientos.</p>
+          </div>
+          <div class="col-sm-4">
+            <div class="image_1"><img src="{% static 'img/utilidad.jpeg' %}"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <!--footer-->
+    <footer class="footer">
+      <div class="container">
+        <div class="row">
+          <div class="col">
+            <h6 class="text-light">AGAVEROS</h6>
+            <p class="text-light">
+                Es una empresa Mexicana de inversión, dedicada a la producción, cuidado y comercialización de agave, fue fundada a raíz del crecimiento en la demanda de agave en la industria tequilera.</p>
+          </div>
+          <div class="col">
+            <h6 class="text-light">Siguenos en: </h6>
+            <ul class="siguenos" >
+              <li><a href="https://www.facebook.com/agaverosmx/?hc_ref=ART8LTvYhPN9PfoKgF5U_hQeZyX0QPaXDaLlh7-OnmB8CVnCTxlonxbP1_F6Vh1SLXQ&fref=nf&__tn__=kC-R"><p class="text-light">Facebook</p></a></li>
+              <li><a href=""><p class="text-light" >Twitter</p></a></li>
+              <li><a href=""><p class="text-light" >Instagram</p></a></li>
+              <li><a href=""><p class="text-light" >Linkedin</p></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- The Modal -->
+    <div class="modal" id="myModal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+        
+                <!-- Modal Header -->
+                <div class="modal-header">
+                <h4 class="modal-title">Registrate para más información</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+        
+                <!-- Modal body -->
+                <div class="modal-body">
+                    <form action="{% url 'registro' %}" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3 mt-3">
+                          <label for="text">Nombre de usuario:</label><br>
+                          {{form.username}}
+                        </div>
+                        <div class="mb-3 mt-3">
+                            <label for="email">Correo:</label><br>
+                            {{form.email}}
+                          </div>
+                        <div class="mb-3 mt-3">
+                            <label for="number">Teléfono:</label><br>
+                            {{form.first_name}}
+                        </div>
+                        <div class="mb-3">
+                          <label for="pwd">Contraseña:</label><br>
+                          {{form.password1}}
+                        </div>
+                        <div class="mb-3">
+                            <label for="pwd">Repite la contraseña:</label><br>
+                            {{form.password2}}
+                          </div>
+                        <button type="submit" class="btn btn-outline-success">Registrarse</button>
+                    </form>
+                </div>
+        
+                <!-- Modal footer -->
+                <div class="modal-footer">
+                <button type="button" class="btn btn-outline-danger" data-bs-dismiss="modal">Close</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+</body>
+</html>

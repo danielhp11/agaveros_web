@@ -1,0 +1,38 @@
+/* -------------------------------------------------------------------
+ * ## ICONO REDES FIXED
+ * ------------------------------------------------------------------- */
+ .social-bar {
+    position: fixed;
+    z-index: 60000;
+    right: 15%;
+}
+.text_info { 
+    font-size: 30px;
+    text-align: center;
+}
+.ride_main {
+    margin: auto;
+    width: 30%; 
+}
+.hr{
+    height: 10px;
+    background-color: black;
+}
+.image_1 img{
+    width: 90%;
+    height: 90%;
+}
+.footer{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+.siguenos{
+    list-style: none;
+}
+.siguenos il a{
+    text-decoration: none;
+}
+.siguenos il a:hover{
+    background-color: #008080;
+}
