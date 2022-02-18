@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ap&k567yschmn!yd45-k(3s3ah5=1(8(+e77#^_-k!_jhpi8tm
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [] #["35.83.47.250","agaveros.mx","www.agaveros.mx","Agaveros.mx","www.Agaveros.mx","AGAVEROS.MX"]#[agaveros.mx,www.agaveros.mx]
+ALLOWED_HOSTS = [] #["54.70.119.136","agaveros.mx","www.agaveros.mx","Agaveros.mx","www.Agaveros.mx","AGAVEROS.MX"]#[agaveros.mx,www.agaveros.mx]
 
 
 # Application definition
